@@ -1,1 +1,1 @@
-## Building a app with prisma graphql pothos.
+## Building a graphql server with prisma，graphql & pothos.
