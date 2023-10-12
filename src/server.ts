@@ -2,6 +2,8 @@ import { createYoga } from "graphql-yoga"
 import { createServer } from "http"
 import { schema } from "./schema"
 
+const port = process.env.POST || 4000
+
 const yoga = createYoga({
   graphqlEndpoint: "/graphql",
   schema,
@@ -14,6 +16,6 @@ const yoga = createYoga({
 
 const server = createServer(yoga)
 
-server.listen(4000, () => {
-  console.log(`🚀 Server ready at: http://localhost:4000/graphql`)
+server.listen(port, () => {
+  console.log(`🚀 Server ready at: http://localhost:${port}/graphql`)
 })
